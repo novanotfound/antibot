@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 
 app = Flask(__name__)
-model = joblib.load('model.pkl')
+model = joblib.load('one_class_svm_model.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():
